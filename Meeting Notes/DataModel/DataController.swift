@@ -1,8 +1,3 @@
-// datamodelcontroller
-
-//
-//  DataModelController.swift
-//  TEST
 //
 //  Created by Farial Mahmod on 7/3/23.
 //
