@@ -21,12 +21,12 @@ MacOS: Ventura 13.4
 
 Homescreen:
 
-![Home Screen](https://github.com/Farial-mahmod/Meeting-Notes-App-iOS/blob/main/homescreen.png)
+![Home Screen](https://github.com/Farial-mahmod/Meeting-Notes-App-iOS/blob/main/Assets/homescreen.png)
 
 Add Note Screen:
 
-![Add Note Screen](https://github.com/Farial-mahmod/Meeting-Notes-App-iOS/blob/main/add_note.png)
+![Add Note Screen](https://github.com/Farial-mahmod/Meeting-Notes-App-iOS/blob/main/Assets/add_note.png)
 
 Edit Note Screen:
 
-![edit Note](https://github.com/Farial-mahmod/Meeting-Notes-App-iOS/blob/main/edit_screen.png)
+![edit Note](https://github.com/Farial-mahmod/Meeting-Notes-App-iOS/blob/main/Assets/edit_screen.png)
