@@ -29,4 +29,4 @@ Add Note Screen:
 
 Edit Note Screen:
 
-![edit Note] (https://github.com/Farial-mahmod/Meeting-Notes-App-iOS/blob/main/edit_screen.png)
+![edit Note](https://github.com/Farial-mahmod/Meeting-Notes-App-iOS/blob/main/edit_screen.png)
