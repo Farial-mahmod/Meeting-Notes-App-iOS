@@ -1,0 +1,48 @@
+//  Created by Farial Mahmod on 7/5/23.
+//
+
+import SwiftUI
+
+struct AddNewNote: View {
+    
+    @Environment(\.managedObjectContext) var managedObjContext
+    @Environment(\.dismiss) var dismiss
+    
+    @State private var name = ""
+    @State private var meeting = ""
+    
+    var body: some View {
+        Form{
+            Section(){
+                
+                TextField("Meeting Title: ", text: $name)
+                TextField("Meeting Points:", text: $meeting, axis: .vertical)
+                
+                VStack{
+                    
+                    VStack{
+                        Spacer()
+                        Button("Save"){
+                            DataController().addNote(
+                                context: managedObjContext,
+                                name: name,
+                                meeting: meeting
+                            )
+                            dismiss()
+                        }
+                        
+                        Spacer()
+                        
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+    struct AddNewNote_Previews: PreviewProvider {
+        static var previews: some View {
+            AddNewNote()
+        }
+    }
+}
