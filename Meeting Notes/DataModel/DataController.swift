@@ -1,32 +1,56 @@
+// datamodelcontroller
+
+//
+//  DataModelController.swift
+//  TEST
+//
+//  Created by Farial Mahmod on 7/3/23.
+//
+
 import Foundation
 import CoreData
 
-class DataController: ObservableObject {
-
-// the container variable below connects to the Data Model
-let container = NSPersistentContainer(name: "NotesModel")
-
- init() {
-        container.loadPersistentStores { description, error in
-            if let error = error {
-                print("Failed to load data in DataController \(error.localizedDescription)")
+class DataController: ObservableObject{
+    
+    let container = NSPersistentContainer(name: "Model")
+    
+    init(){
+        
+        container.loadPersistentStores(completionHandler: ){ description, error in
+            if let error = error{
+                print("\(error.localizedDescription)")
             }
+            
         }
+        
     }
-
-  // to store or save data with NSManagedObjectContext
-  func save(context: NSManagedObjectContext) {
-        do {
+    
+    func save(context: NSManagedObjectContext){
+        do{
             try context.save()
-            print("Saved successfully.")
-        } catch {
-            // to display if errors rise up
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+        
+        catch{
+            print("Could not save.")
         }
     }
     
-
-  
-
+    func addNote(context: NSManagedObjectContext, name: String, meeting: String){
+        let note = Note(context: context)
+        note.id = UUID()
+        note.name = name
+        note.meeting = meeting
+        note.date = Date()
+        
+        save(context: context)
+        
+    }
+    
+    func editNote(note: Note, name: String, meeting: String, context: NSManagedObjectContext){
+        note.date = Date()
+        note.name = name
+        note.meeting = meeting
+        save(context: context)
+    }
+    
 }
