@@ -5,7 +5,7 @@ import SwiftUI
 // this indicates the starting point (main) of the app
 @main
 
-struct TestApp: App{
+struct MeetingNotesApp: App{
     
     @StateObject private var dataController = DataController()
     
