@@ -1,6 +1,6 @@
 # Meeting Notes App iOS
 
-## App Objective: iOS app developed using Swift to smoothly take notes in meetings and elsewhere. 
+## App Objective: iOS app developed using Swift to smoothly take notes in meetings and keep the notes saved locally without internet connection. 
 ### Why Felt Necessity:
 In my last job, I had to take notes on paper during the meetings. I felt that I should develop an app that makes it easy to save notes instantly without any hassle during the meetings. So, I started working on this simple-featured app. Using own app to assist myself and others feels great.
 
